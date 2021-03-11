@@ -120,7 +120,7 @@ export class ClaEmployeeRequestAccessModal {
       }
 
       if (this.userEmails.length === 1) {
-        this.form.controls['user_email'].setValue(user.user_emails[0]);
+        this.form.controls['user_email'].setValue(this.userEmails[0]);
       }
     }
   }

@@ -1,0 +1,16 @@
+{
+    "auth0-clientId": "hquZHO8JNsaIScoayPtCS5VELdn7TnVq",
+    "auth0-domain": "linuxfoundation-dev.auth0.com",
+    "api-base": "https://api.lfcla.dev.platform.linuxfoundation.org",
+    "api-v4-base": "https://api-gw.dev.platform.linuxfoundation.org/cla-service",
+    "cla-api-url": "https://api.dev.lfcla.com",
+    "cla-logo-s3-url": "https://s3.amazonaws.com/cla-project-logo-dev",
+    "gh-app-public-link": "https://github.com/apps/dev-communitybridge-easycla",
+    "landing-page": "https://dev.lfcla.com",
+    "lfx-footer": "https://cdn.dev.platform.linuxfoundation.org/lfx-footer-no-zone.js",
+    "lfx-header": "https://cdn.dev.platform.linuxfoundation.org/lfx-header-no-zone.js",
+    "lfx-header-enabled": "true",
+    "proj-console-link": "https://project.dev.lfcla.com",
+    "admin-v2-base":"https://projectadmin.lfx.linuxfoundation.org/",
+    "corporate-v2-base":"https://member.lfx.linuxfoundation.org/"
+}
