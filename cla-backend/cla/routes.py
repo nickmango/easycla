@@ -815,11 +815,14 @@ def get_project(project_id: hug.types.uuid):
             cla.log.debug(f'{fn} - determined that the cla group is signed at the foundation')
             signed_at_foundation = True
 
-        cla.log.debug(f'{fn} - querying github repositories for cla group: {project.get("project_name", None)} '
-                      f'with id: {project_id}...')
+        cla.log.debug(f'{fn} - querying github/gitlab repositories for cla group: {project.get("project_name", None)} '
+                      f'with id: {project_id} and project_sfid:{project_sfid}...')
+        mapping_record['github_repos'] = []
+        mapping_record["gitlab_repos"] = []
         repositories = Repository().get_repository_by_project_sfid(project_sfid)
-        mapping_record['github_repos'] = [repo.to_dict() for repo in repositories if repo.get_repository_type() == "github"]
-        mapping_record["gitlab_repos"] = [repo.to_dict() for repo in repositories if repo.get_repository_type() == "gitlab"]
+        if repositories:
+            mapping_record['github_repos'] = [repo.to_dict() for repo in repositories if repo.get_repository_type() == "github"]
+            mapping_record["gitlab_repos"] = [repo.to_dict() for repo in repositories if repo.get_repository_type() == "gitlab"]
         mapping_record['gerrit_repos'] = []
         try:
             cla.log.debug(f'{fn} - querying gerrit repositories for cla group: {project.get("project_name", None)} '
